@@ -1,0 +1,11 @@
+.button {
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+
+.button:first-child {
+  margin-left: 0px;
+}

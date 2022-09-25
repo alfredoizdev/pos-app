@@ -1,0 +1,21 @@
+.filterField {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.field {
+  position: relative;
+}
+
+.clear {
+  background: white;
+  border: none;
+  font-size: 14px;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 4px;
+  right: 2px;
+  cursor: pointer;
+}

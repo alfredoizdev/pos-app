@@ -1,0 +1,58 @@
+.card {
+  width: 30%;
+  background-color: rgb(253, 253, 253);
+  -webkit-box-shadow: -4px 4px 10px -7px rgba(20, 20, 20, 1);
+  -moz-box-shadow: -4px 4px 10px -7px rgba(20, 20, 20, 1);
+  box-shadow: -4px 4px 10px -7px rgba(20, 20, 20, 1);
+  background-color: white;
+  border-radius: 9px;
+  overflow: hidden;
+}
+
+.cardHeader {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  border-bottom:1px solid #ccc ;
+}
+
+.edit {
+	padding: 5px;
+	border: none;
+	border-radius: 50%;
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	right: 10px;
+	bottom: -20px;
+	cursor: pointer;
+	background-color: rgb(24, 131, 58);
+	color: white;
+	 -webkit-box-shadow: -4px 4px 10px -7px rgba(20, 20, 20, 1);
+  -moz-box-shadow: -4px 4px 10px -7px rgba(20, 20, 20, 1);
+  box-shadow: -4px 4px 10px -7px rgba(20, 20, 20, 1);
+}
+
+.cardHeader h2 {
+  font-size: 17px;
+  text-transform: uppercase;
+  color: rgb(49, 49, 49);
+}
+
+.cardBody {
+  padding: 10px;
+  width: 100%;
+}
+
+.cardMeta {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.5;
+}
+
+@media (max-width: 620px) {
+  .card {
+    width: 100%;
+  }
+}
