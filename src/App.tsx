@@ -30,10 +30,11 @@ export default function App() {
 
 				{data
 					.filter(
-						({ name, email }) =>
+						({ name, email, phone }) =>
 							name.first.toLowerCase().includes(searchQuery.toLowerCase()) ||
 							name.last.toLowerCase().includes(searchQuery.toLowerCase()) ||
-							email.toLowerCase().includes(searchQuery.toLowerCase())
+							email.toLowerCase().includes(searchQuery.toLowerCase()) ||
+							phone.includes(searchQuery)
 					)
 					.map((user: IUserData, index: any) => (
 						<Card key={index} user={user} />

@@ -2,6 +2,7 @@ import { FunctionComponent, useEffect, useReducer } from "react";
 import { AppContext, appReducer } from "./";
 import IUserData, { IUserUpdated } from "../interface/user";
 import { sortUp, sortDown } from "../helpers/sortFunctions";
+import { formatted } from "../helpers";
 
 export interface AppState {
 	data: IUserData[];
@@ -50,6 +51,13 @@ export const AppProvider: FunctionComponent<Props> = ({ children }) => {
 					}
 				);
 				const { results } = await response.json();
+				let users: IUserData[] = results.map((user: IUserData) => {
+					if (user.phone) {
+						user["phone"] = formatted.formatToIntPhoneNumber(user.phone) || "no";
+						return { ...user }
+					}
+				});
+				console.log(users)
 				dispatch({ type: "[UI] - loading", payload: false });
 				dispatch({ type: "[User] - set data users", payload: results });
 			} catch (error) {

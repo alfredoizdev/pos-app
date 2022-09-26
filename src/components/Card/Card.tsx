@@ -3,6 +3,7 @@ import IUserData from "../../interface/user";
 import styles from "./Card.module.css";
 import { FiPenTool } from 'react-icons/fi';
 import { AppContext } from '../../context/AppContext';
+import { formatted } from '../../helpers';
 
 interface Props {
 	user: IUserData
@@ -30,9 +31,9 @@ const Card: FC<Props> = ({ user }) => {
 					<span>
 						<b>email:</b> {user.email}
 					</span>
-					<span>
-						<b>phone:</b> {user.phone}
-					</span>
+					{user.phone !== "no" && <span>
+						<b>phone:</b> {formatted.formatPhoneNumber(user.phone)}
+					</span>}
 					<span>
 						<b>address:</b>{user.location.street?.number} {user.location.street.name},
 					</span>
